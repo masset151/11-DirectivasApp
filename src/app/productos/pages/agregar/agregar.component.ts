@@ -21,11 +21,11 @@ export class AgregarComponent {
   }
 
   cambiarNombre(){
-    this.texto1 = "DON JUAN CARLOS ARAGON"
+    this.texto1 = Math.random().toString()
   }
 
   cambiarColor(){
-    this.color1 = 'green'
+    this.color1 = "#xxxxxx".replace(/x/g, y=>(Math.random()*16|0).toString(16));
   }
 
 }
