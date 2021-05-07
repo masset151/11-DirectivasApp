@@ -11,11 +11,12 @@
         <div class="col-auto">
             <input class="form-control" formControlName="nombre">
             <span 
-            class="form-text"
+            
             error-msg
+            color="red"
+            mensaje="campo requerido"
             *ngIf="tieneError('nombre')"
             >
-              Este campo debe ser un nombre
             </span>
         </div>
         <div class="row mt-5">
