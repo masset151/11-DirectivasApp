@@ -1,4 +1,4 @@
-<h1 class="mt-5">Agregar Producto</h1>
+<h1 class="mt-5">Agregar Producto</h1><small>{{texto1}}</small>
 <hr>
 
 
@@ -14,15 +14,20 @@
             
             error-msg
             color="red"
-            mensaje="campo requerido"
+            [mensaje]="texto1"
+            [color] ='color1'
             *ngIf="tieneError('nombre')"
             >
             </span>
         </div>
         <div class="row mt-5">
             <div class="col">
-                <button class="btn btn-primary float-end" type="submit">
+                <button class="btn btn-primary float-end" type="submit" (click)="cambiarNombre()">
                     Guardar
+                </button>
+                &nbsp;
+                <button class="btn btn-primary ml-1" type="submit" (click)="cambiarColor()">
+                    Cambiar Color
                 </button>
             </div>
         </div>
