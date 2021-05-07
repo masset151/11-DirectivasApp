@@ -16,7 +16,7 @@
             color="red"
             [mensaje]="texto1"
             [color] ='color1'
-            *ngIf="tieneError('nombre')"
+            [valido]="!tieneError('nombre')"
             >
             </span>
         </div>

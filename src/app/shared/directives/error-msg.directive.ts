@@ -20,6 +20,14 @@ export class ErrorMSGDirective implements OnInit,OnChanges {
     
   }
 
+  @Input() set valido(valor:boolean){
+    if(valor){
+      this.htmlElement.nativeElement.classList.add('hidden');
+    }else{
+      this.htmlElement.nativeElement.classList.remove('hidden')
+    }
+  }
+
   constructor(private el:ElementRef<HTMLElement>) { 
     console.log('constructor directive')
     console.log(el)
